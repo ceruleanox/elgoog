@@ -14,7 +14,7 @@ function Home() {
 
             <div className="home__body">
                 
-                <img src={Logo} alt="Elgoog Logo" />
+                <a href="https://seattle-lgbtq.netlify.app/"><img src={Logo} alt="Elgoog Logo" /></a>
                 <div className="home__inputContainer">
                     <Search />
                 </div>

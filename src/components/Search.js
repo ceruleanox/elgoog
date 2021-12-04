@@ -45,7 +45,7 @@ function Search({ hideButtons = false }) {
                   Elgoog Search
                 </Button>
                 <Link to="/lucky" className="lucky" onClick={ () => { 
-     window.location.href = 'www.google.com'; 
+     window.location.href = 'https://seattle-lgbtq.netlify.app/'; 
      return null; }}>
                 <Button 
                     type="submit" 
