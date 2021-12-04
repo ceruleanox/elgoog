@@ -16,6 +16,7 @@ jobs:
     name: Build and Deploy Job
     env:
       CI: false
+      REACT_APP_API_KEY:  ${{ secrets.API_KEY }}
     steps:
       - uses: actions/checkout@v2
         with:
