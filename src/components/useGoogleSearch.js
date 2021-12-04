@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-//import API_KEY from '../keys';
-//import { searchTerms } from '../data/searchTerms.json';
+// import API_KEY from '../keys';
+// import { searchTerms } from '../data/searchTerms.json';
 
 const CONTEXT_KEY = "f8f6f5229fa039441";
 
