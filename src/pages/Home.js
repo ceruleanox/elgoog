@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import { Link, Route } from 'react-router-dom';
+// import { Link, Route } from 'react-router-dom';
 import Search from '../components/Search';
 import Logo from '../images/logo.png';
 

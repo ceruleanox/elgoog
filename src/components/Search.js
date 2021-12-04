@@ -6,10 +6,10 @@ import { Button } from '@material-ui/core'
 import { useNavigate } from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
 import { actionTypes } from './reducer';
-import { Link, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Search({ hideButtons = false }) {
-    const [{}, dispatch] = useStateValue();
+    const [{}, dispatch] = useStateValue(); 
     const [input, setInput] = useState("");
     const navigate = useNavigate();
  
