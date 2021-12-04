@@ -14,7 +14,7 @@ const useGoogleSearch = (term) => {
     useEffect( () => {
         const fetchData = async() => {
             fetch(
-                `https://www.googleapis.com/customsearch/v1?key=${secrets.API_KEY}&cx=${CONTEXT_KEY}&q=${term}+${modSearch}`
+                `https://www.googleapis.com/customsearch/v1?key=${process.env.REACT_APP_API_KEY}&cx=${CONTEXT_KEY}&q=${term}+${modSearch}`
             )
             .then(response => response.json())
             .then(result => {
