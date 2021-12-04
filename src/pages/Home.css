@@ -1,0 +1,19 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.home__body {
+    flex: 1;
+    display: flex;
+    margin-top: 5%;
+    flex-direction: column;
+    padding: 20px 30px;
+}
+
+.home__body > img {
+    object-fit: contain;
+    height: 100px;
+}
+
