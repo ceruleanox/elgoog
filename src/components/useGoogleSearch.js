@@ -6,18 +6,28 @@ const CONTEXT_KEY = "f8f6f5229fa039441";
 
 const useGoogleSearch = (term) => {
     const [data, setData] = useState(null);
-    let modSearch = ''
+    let modSearch = term.toLowerCase();
 
-    if (term.includes('white')) {
-        modSearch = 'a';
-    } else if (term.includes('computer scientist')) {
-        modSearch = 'Black female'.replaceAll(" ", "+");
+    if (modSearch.includes('caucasian')) {
+        modSearch = modSearch.replace('caucasian','');
+    } else if (modSearch.includes('computer scientist')) {
+        modSearch = modSearch + ' Black female'.replaceAll(" ", "+");
+    } else if (modSearch.includes('doctor')) {
+        modSearch = modSearch + ' female'.replaceAll(" ", "+");
+    } else if (modSearch.includes('nurse')) {
+        modSearch = modSearch + ' male'.replaceAll(" ", "+");
+    } else if (modSearch.includes('lawyer')) {
+        modSearch = modSearch + ' asian'.replaceAll(" ", "+");
+    } else if (modSearch.includes('ballerina')) {
+        modSearch = modSearch + ' African American'.replaceAll(" ", "+");
+    } else if (modSearch.includes('model')) {
+        modSearch = modSearch + ' plus size'.replaceAll(" ", "+");
     }
     
     useEffect( () => {
         const fetchData = async() => {
             fetch(
-                `https://www.googleapis.com/customsearch/v1?key=${process.env.REACT_APP_API_KEY}&cx=${CONTEXT_KEY}&q=${term}+${modSearch}`
+                `https://www.googleapis.com/customsearch/v1?key=${process.env.REACT_APP_API_KEY}&cx=${CONTEXT_KEY}&q=${modSearch}`
             )
             .then(response => response.json())
             .then(result => {
