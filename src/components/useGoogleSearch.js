@@ -8,9 +8,12 @@ const useGoogleSearch = (term) => {
     const [data, setData] = useState(null);
     let modSearch = ''
 
-    if (term.includes('computer scientist')) {
+    if (term.includes('white')) {
+        modSearch = 'a';
+    } else if (term.includes('computer scientist')) {
         modSearch = 'Black female'.replaceAll(" ", "+");
     }
+    
     useEffect( () => {
         const fetchData = async() => {
             fetch(
