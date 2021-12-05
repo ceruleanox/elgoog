@@ -22,7 +22,15 @@ const useGoogleSearch = (term) => {
         modSearch = modSearch + ' African American'.replaceAll(" ", "+");
     } else if (modSearch.includes('model')) {
         modSearch = modSearch + ' plus size'.replaceAll(" ", "+");
-    }
+    } else if (modSearch.includes('hiring')) {
+        modSearch = modSearch + ' veteran military heroes'.replaceAll(" ", "+");
+    } else if (modSearch.includes('reads')) {
+        modSearch = modSearch + ' disabilitty characters'.replaceAll(" ", "+");
+    } else if (modSearch.includes('who\'s who')) {
+        modSearch = modSearch + ' leader queer'.replaceAll(" ", "+");
+    } else if (modSearch.includes('tiktok')) {
+        modSearch = modSearch + ' older adults connecting 80-year'.replaceAll(" ", "+");
+    } 
     
     useEffect( () => {
         const fetchData = async() => {
