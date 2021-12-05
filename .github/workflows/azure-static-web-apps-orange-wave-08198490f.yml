@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         env:
-          REACT_APP_API_KEY: $(API_KEY) 
+          REACT_APP_API_KEY: ${{secrets.API_KEY}} 
         with:
           submodules: true
       - name: Build And Deploy
